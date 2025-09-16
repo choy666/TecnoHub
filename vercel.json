@@ -17,7 +17,13 @@
     },
     {
       "src": "/(.*)",
-      "dest": "/public/$1"
+      "dest": "/public/$1",
+      "headers": {
+        "Cache-Control": "s-maxage=0, stale-while-revalidate=60"
+      }
     }
-  ]
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }

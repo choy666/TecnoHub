@@ -17,29 +17,20 @@ const ticketRoutes = require('./routes/ticket.routes'); //
 const app = express();
 
 // middlewares globales
+// En src/server.js, actualiza la configuración de CORS:
 const corsOptions = {
-  origin: function (origin, callback) {
-    // Permitir solicitudes sin origen (como aplicaciones móviles o curl)
-    if (!origin) return callback(null, true);
-    
-    // Lista de orígenes permitidos
-    const allowedOrigins = [
-      'http://localhost:8080',
-      'http://127.0.0.1:8080',
-      'http://localhost:3000',
-      'http://127.0.0.1:3000'
-    ];
-    
-    if (allowedOrigins.indexOf(origin) !== -1 || !origin) {
-      callback(null, true);
-    } else {
-      callback(new Error('No permitido por CORS'));
-    }
-  },
+  origin: [
+    'http://localhost:8080',
+    'http://127.0.0.1:8080',
+    'http://localhost:3000',
+    'http://127.0.0.1:3000',
+    'https://tecno-hgymvbxcw-choymingollagmailcoms-projects.vercel.app',
+    'https://tecno-hub.vercel.app'
+  ],
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Accept'],
   credentials: true,
-  optionsSuccessStatus: 200 // Algunos navegadores antiguos (IE11, varios SmartTVs) se bloquean con 204
+  optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
 app.use(express.json());
