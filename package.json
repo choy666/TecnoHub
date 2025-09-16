@@ -1,0 +1,42 @@
+{
+  "name": "tecnohub",
+  "version": "1.0.0",
+  "description": "Este proyecto es propiedad exclusiva de su autor. No está autorizado su uso, modificación ni distribución sin consentimiento explícito. Todos los derechos reservados.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon src/run-local.js",
+    "start:local": "node src/run-local.js",
+    "build": "echo 'No build step required for this project' && exit 0",
+    "test": "dotenv -e .env.test -- cross-env NODE_ENV=test jest --runInBand",
+    "test:cov": "dotenv -e .env.test -- cross-env NODE_ENV=test jest --runInBand --coverage",
+    "test:watch": "dotenv -e .env.test -- cross-env NODE_ENV=test jest --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.12.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "express-validator": "^7.2.1",
+    "morgan": "^1.10.1",
+    "pg": "^8.16.3",
+    "qs": "^6.14.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "cross-env": "^10.0.0",
+    "dotenv-cli": "^10.0.0",
+    "jest": "^30.1.3",
+    "nodemon": "^3.1.4",
+    "supertest": "^7.1.4"
+  },
+  "jest": {
+    "testTimeout": 15000
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}

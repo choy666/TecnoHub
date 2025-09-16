@@ -1,0 +1,41 @@
+# 🌐 Variables de entorno (credenciales y configuración)
+.env
+.env.local
+.env.*.local
+
+# 📦 Dependencias de Node
+node_modules/
+
+# 🏗 Archivos de compilación / build
+dist/
+build/
+.cache/
+.next/
+out/
+
+# ⚙️ Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# 📝 Logs y reportes
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# 🧪 Cobertura de tests
+coverage/
+
+# 🔧 Configuración de editores (opcional)
+.vscode/
+.idea/
+
+# 📂 Archivos de lock alternativos (si no los usás)
+yarn.lock
+pnpm-lock.yaml
+
+# 🚀 Archivos generados por frameworks
+*.pid
+*.seed
+.vercel
