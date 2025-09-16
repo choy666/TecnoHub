@@ -1,41 +1,156 @@
-# 🌐 Variables de entorno (credenciales y configuración)
+# 🌐 Variables de entorno y configuraciones sensibles
 .env
+.env.*
+!.env.example
 .env.local
-.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
+config/local-*.json
+*.pem
+*.key
+*.crt
+*.p12
+*.pfx
+*.p8
+*.p7b
+*.p7c
+*.p7s
+*.cer
+*.der
 
-# 📦 Dependencias de Node
+# 📦 Dependencias y paquetes
 node_modules/
+jspm_packages/
+.pnp
+.pnp.js
+.yarn/install-state.gz
+.pnp.*
 
-# 🏗 Archivos de compilación / build
+# 🏗 Directorios de compilación y salida
 dist/
 build/
 .cache/
 .next/
 out/
+.vercel/
+.serverless/
+.fusebox/
+dll/
+coverage/
+.temp/
+.tmp/
+.ng_pkg_build/
+.ng_build/
+.ng_compiled/
+.ng_package/
+.ng_pkg_build/
+.ngcc_lock_file
+.storybook-out/
 
-# ⚙️ Archivos temporales del sistema
-.DS_Store
-Thumbs.db
-
-# 📝 Logs y reportes
+# 📝 Logs
+logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-*.log
+lerna-debug.log*
+.pnpm-debug.log*
+.pnpm-store/
+.yarn-integrity
 
-# 🧪 Cobertura de tests
+# 🧪 Testing
 coverage/
+.nyc_output/
+test-results/
+test-results.xml
+test-report.xml
+junit.xml
+coverage/
+.nyc_output/
+*.lcov
 
-# 🔧 Configuración de editores (opcional)
-.vscode/
+# 🔐 Claves SSH
+*.pem
+id_rsa
+id_dsa
+id_ecdsa
+id_ed25519
+id_ecdsa_sk
+id_ed25519_sk
+known_hosts
+known_hosts.old
+
+# 🗄️ Base de datos
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.sql
+*.sql.gz
+*.sqlite-journal
+
+# 🔧 Entornos de desarrollo
 .idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+Thumbs.db
+*.sublime-workspace
+*.sublime-project
+.project
+.settings/
+*.sublime-*
 
-# 📂 Archivos de lock alternativos (si no los usás)
-yarn.lock
-pnpm-lock.yaml
-
-# 🚀 Archivos generados por frameworks
-*.pid
-*.seed
+# 🚀 Archivos específicos de Vercel
 .vercel
+.vercel_build_output.log
+.vercel_build_output/
+.vercel_deployment
+
+# 🧹 Archivos temporales
+*.tmp
+*.temp
+.temp/
+.tmp/
+.tempfiles/
+*.bak
+*.swp
+*~.nib
+*.swo
+*#
+.*.swp
+.~lock.*
+*.lock
+*#
+.~lock*
+*.lock
+*.lck
+*.log.*
+*.pid
+*.pid.lock
+*.seed
+*.pid
+*.pid.lock
+*.tsbuildinfo
+.npm
+.eslintcache
+.stylelintcache
+.node_repl_history
+*.tgz
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# 📊 Archivos de análisis
+.stats.html
+.stats.json
+webpack-stats.json
+stats/
+stats.json
